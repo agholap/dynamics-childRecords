@@ -19,6 +19,9 @@ namespace UpdateChildRecord
     {
         static void Main(string[] args)
         {
+            ImportData.GetExcelData();
+            Console.ReadKey();
+            return;
             // Define the fetch attributes.
             // Set the number of records per page to retrieve.
             int fetchCount = 5000;
@@ -108,7 +111,7 @@ namespace UpdateChildRecord
                     }
                 }
             }
-            Console.ReadKey();
+
 
         }
         public static void ProcessContacts(Entity user,DataCollection<Entity> entities, OrganizationServiceProxy service)
